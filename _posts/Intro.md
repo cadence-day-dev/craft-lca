@@ -1,6 +1,6 @@
 ---
 title: "Addressing liabilities"
-excerpt: "There is a growing urgency to understand the environmental cost of what already exists. Regulation and taxation on embodied carbon are turning old buildings into new liabilities. CRAFT applies modern computational methods to produce life cycle assessments in a fraction of the time and at a fraction of the cost."
+excerpt: "There is a growing urgency to understand the environmental cost of what already exists. Regulation and taxation on embodied carbon are turning old buildings into new liabilities."
 coverImage: "/assets/blog/intro/cover.png"
 date: "2025-11-11T05:35:07.322Z"
 author:
