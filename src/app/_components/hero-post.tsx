@@ -75,12 +75,12 @@ export function HeroPost({
         </div>
         <div className="md:grid md:grid-cols-2 md:gap-x-16 lg:gap-x-8 mb-20 md:mb-28">
           <div>
-            <h3 className="mb-4 text-lg lg:text-lg leading-tight font-normal uppercase tracking-wider">
+            <h3 className="mb-4 text-md lg:text-md leading-tight font-normal uppercase tracking-wider">
               <Link href={`/posts/${slug}`} className="hover:underline">
                 {title}
               </Link>
             </h3>
-            <div className="mb-4 md:mb-0 text-md tracking-wider">
+            <div className="mb-4 md:mb-0 text-sm tracking-wider">
               <DateFormatter dateString={date} />
             </div>
           </div>
