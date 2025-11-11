@@ -53,7 +53,13 @@ export function MobileMenu() {
             </div>
             
             <nav className="flex flex-col items-center justify-center flex-1 space-y-8">
-             
+            <Link 
+                href="/" 
+                className="text-lg font-normal hover:opacity-70 transition-opacity"
+                onClick={toggleMenu}
+              >
+                STORY
+              </Link>
 
               <Link 
                 href="/about" 
@@ -74,7 +80,7 @@ export function MobileMenu() {
                 className="text-lg font-normal hover:opacity-70 transition-opacity"
                 onClick={toggleMenu}
               >
-                SIGN IN
+                PORTAL
               </Link>
             </nav>
           </div>
