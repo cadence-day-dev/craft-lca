@@ -2,15 +2,24 @@
 
 import Container from "@/app/_components/container";
 import { Intro } from "@/app/_components/intro";
+import WeeklyCalendar from "@/app/_components/weekly-calendar";
+import SignIn from "@/app/_components/sign-in";
+import { useAuthStore } from "@/app/store/auth-store";
 import { useEffect, useState } from "react";
 
 export default function Dashboard() {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+  const [error, setError] = useState<string | null>(null);
+  const { isSignedIn, signOut } = useAuthStore();
 
   useEffect(() => {
     const fetchData = async () => {
+      if (!isSignedIn) {
+        setLoading(false);
+        return;
+      }
+      
       try {
         console.log('Starting API request...');
         setLoading(true);
@@ -30,40 +39,35 @@ export default function Dashboard() {
         setData(result);
       } catch (err) {
         console.error('Fetch error:', err);
-        setError(err.message);
+        setError(err instanceof Error ? err.message : 'Unknown error');
       } finally {
         setLoading(false);
       }
     };
 
     fetchData();
-  }, []);
+  }, [isSignedIn]);
+
+  // Show sign-in form if not authenticated
+  if (!isSignedIn) {
+    return <SignIn />;
+  }
 
   return (
     <main>
       <Container>
         <Intro />
-        <article className="mb-2.5 md:mb-32">
-          <div className="max-w-2xl mx-auto">
-            <h1 className="text-md md:text-lg tracking-wider leading-tight mb-12 text-left uppercase font-normal">
-              Internal tools
-            </h1>
-            
-            <div className="text-lg leading-relaxed">
-              {loading && (
-                <p className="mb-6">Loading data...</p>
-              )}
-              
-              {error && (
-                <p className="mb-6 text-red-600">Error: {error}</p>
-              )}
-              
-              {data && (
+        <article>
+          <div className="max-w-6xl mx-auto px-5">
+            <div className="flex justify-between items-center mb-6">
+              <h2 className="text-base font-normal uppercase tracking-wider">Weekly Calendar</h2>
+            </div>
+            <div>
+              {loading && <p>Loading...</p>}
+              {error && <p className="text-red-600">Error: {error}</p>}
+              {data && !loading && (
                 <div className="mb-6">
-                  <h2 className="text-base font-medium mb-4">API Response:</h2>
-                  <pre className="bg-gray-100 p-4 rounded text-sm overflow-auto">
-                    {JSON.stringify(data, null, 2)}
-                  </pre>
+                  <WeeklyCalendar timeslices={data} />
                 </div>
               )}
             </div>

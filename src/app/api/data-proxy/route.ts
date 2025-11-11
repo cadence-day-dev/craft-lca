@@ -20,8 +20,8 @@ export async function GET() {
       );
     }
 
-    // Get activities data
-    const endpoint = '/activities';
+    // Get timeslices data
+    const endpoint = '/timeslices';
     const url = `${baseUrl}${endpoint}`;
     
     console.log('Making request to:', url);
@@ -49,7 +49,7 @@ export async function GET() {
   } catch (error) {
     console.error('API proxy error:', error);
     return NextResponse.json(
-      { error: 'Failed to fetch data from external API', details: error.message },
+      { error: 'Failed to fetch data from external API', details: error instanceof Error ? error.message : 'Unknown error' },
       { status: 500 }
     );
   }
