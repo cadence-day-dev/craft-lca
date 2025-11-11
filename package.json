@@ -6,6 +6,10 @@
     "build": "next build",
     "start": "next start"
   },
+  "overrides": {
+    "@types/react": "$@types/react",
+    "@types/react-dom": "$@types/react-dom"
+  },
   "dependencies": {
     "classnames": "^2.5.1",
     "date-fns": "^3.6.0",
