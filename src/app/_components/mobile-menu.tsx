@@ -38,7 +38,7 @@ export function MobileMenu() {
             <div className="py-8 border-b">
               <Container>
                 <div className="flex justify-between items-center">
-                  <h2 className="text-2xl tracking-tighter font-normal">C r a f t</h2>
+                  <h2 className="text-2xl tracking-tighter font-normal">K o t o</h2>
                   <button 
                     onClick={toggleMenu}
                     className="flex flex-col items-center justify-center w-8 h-8 space-y-1"

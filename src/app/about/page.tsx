@@ -8,12 +8,12 @@ import { useState } from "react";
 
 
 const teamMembers = [
-  {
-    name: "Driss",
-    image: "/assets/blog/authors/Driss.png",
-    shortDescription: "...",
-    extendedDescription: "..."
-  },
+  // {
+  //   name: "Driss",
+  //   image: "/assets/blog/authors/Driss.png",
+  //   shortDescription: "...",
+  //   extendedDescription: "..."
+  // },
   {
     name: "Bruno",
     image: "/assets/blog/authors/Bruno.png",
@@ -53,7 +53,7 @@ export default function About() {
             <div className="text-lg leading-relaxed">
               
               <p className="mb-6">
-              We are a team of computational designers with deep expertise in VDC and LCA, based across Copenhagen, Brussels, and Berlin.
+              We are a team of computational designers with deep expertise in VDC and LCA, based across Copenhagen and Berlin.
 
 Our work bridges design intelligence and environmental responsibility. We develop tools and methods that make life-cycle assessments faster, more accessible, and more relevant for the existing built environment.
 

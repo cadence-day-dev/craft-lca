@@ -7,7 +7,7 @@ export function Intro() {
     <section className="flex flex-row items-center justify-between mt-8 mb-8">
       <h3 className="text-2xl md:text-2xl tracking-tighter leading-tight md:pr-8 font-normal">
         <Link href="/" className="hover:underline">
-         C r a f t
+         K o t o
         </Link>
       </h3>
       

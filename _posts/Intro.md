@@ -10,7 +10,7 @@ ogImage:
   url: "/assets/blog/dynamic-routing/cover.jpg"
 ---
 
-CRAFT helps to identify and quatify liabilities through time efficient and cost-effective LCA service for large property portfolios, banks, pension funds, and institutions that must now account for embodied carbon in the building stock as carefully as capital.
+Koto helps to identify and quatify liabilities through time efficient and cost-effective LCA service for large property portfolios, banks, pension funds, and institutions that must now account for embodied carbon in the building stock as carefully as capital.
 
 Using computational design, we reconstruct each building as a simplified geometry and run simulations that deliver an 80% accurate LCA, at a fraction of the time and cost of traditional methods.
 

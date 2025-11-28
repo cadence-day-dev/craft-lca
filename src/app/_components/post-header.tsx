@@ -30,7 +30,7 @@ export function PostHeader({ title, coverImage, date, author }: Props) {
     {
       name: "Bruno",
       image: "/assets/blog/authors/Bruno.png",
-      shortDescription: "Oleg combines technical expertise with creative vision, specializing in the integration of technology and craft in contemporary design practice.",
+      shortDescription: "Oleg combines technical expertise with creative vision, specializing in the integration of technology and Koto in contemporary design practice.",
       extendedDescription: "..."
     },
     {
